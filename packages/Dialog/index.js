@@ -1,4 +1,4 @@
-import Main from "./src/main.vue";
+import Main from "./src/main";
 
 /* istanbul ignore next */
 // 删除方法

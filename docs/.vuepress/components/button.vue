@@ -1,17 +1,12 @@
 <template>
   <div>
-    {{ params }}
+    <data-button type="primary">Button Test</data-button>
   </div>
 </template>
 
 <script>
   export default {
-    props: {
-      params: {
-        type: Object,
-        default: () => ({}),
-      },
-    },
+    name: 'DemoButton',
   }
 </script>
 
