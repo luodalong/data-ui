@@ -7,15 +7,15 @@
 </template>
 
 <script>
-  export default {
-    name: 'DataButton',
-    props: {
-      type: {
-        type: String,
-        default: '',
-      },
+export default {
+  name: 'DataButton',
+  props: {
+    type: {
+      type: String,
+      default: '',
     },
-  }
+  },
+}
 </script>
 
 <style lang="scss" scoped></style>

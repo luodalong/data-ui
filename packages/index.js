@@ -10,7 +10,7 @@ const install = function (Vue) {
   if (install.installed) return
 
   // 遍历注册全局组件
-  components.map(component => {
+  components.map((component) => {
     let name = component.name
     if (name.indexOf('Data') !== 0) {
       name = `data-${name}`
@@ -18,7 +18,7 @@ const install = function (Vue) {
     return Vue.component(name, component)
   })
 
-  Vue.use(Dialog);
+  Vue.use(Dialog)
 }
 
 // 判断是否是直接引入文件

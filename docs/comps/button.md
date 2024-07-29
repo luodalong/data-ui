@@ -7,7 +7,7 @@
 适用广泛的基础单选
 
 ::: demo
-```js
+```html
 <template>
   <div>
     <data-button type="primary">Button Test</data-button>

@@ -24,5 +24,8 @@ module.exports = {
   },
   head: [],
   plugins: ['demo-container'],
-  markdown: {}
+  markdown: {},
+  chainWebpack (config) {
+    config.resolve.alias.set('core-js/library/fn', 'core-js/features');
+  },
 }

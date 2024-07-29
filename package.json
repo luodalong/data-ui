@@ -19,7 +19,7 @@
     "*.js"
   ],
   "dependencies": {
-    "core-js": "^2.6.12",
+    "core-js": "^3.37.1",
     "vue": "^2.6.14"
   },
   "devDependencies": {
@@ -29,8 +29,12 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "element-ui": "^2.15.14",
-    "eslint": "^7.32.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^8.0.3",
+    "prettier": "^3.3.3",
     "vue-template-compiler": "^2.6.14",
     "vuepress": "^1.9.10",
     "vuepress-plugin-demo-container": "^0.2.0"

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Element from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css';
+import 'element-ui/lib/theme-chalk/index.css'
 
 import DataUi from '../packages/index'
 
@@ -13,5 +13,5 @@ Vue.use(DataUi)
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  render: (h) => h(App),
 }).$mount('#app')

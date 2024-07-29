@@ -20,41 +20,41 @@
 </template>
 
 <script>
-  export default {
-    name: 'DataDialog',
-    data() {
-      return {
-        visible: false,
-        dialogParams: {
-          title: '',
-          width: '',
-          Comp: null,
-          params: {},
-        },
-      }
-    },
-    mounted() {
-      this.visible = true
-      const { title, width, Comp, params } = this.$options
+export default {
+  name: 'DataDialog',
+  data() {
+    return {
+      visible: false,
+      dialogParams: {
+        title: '',
+        width: '',
+        Comp: null,
+        params: {},
+      },
+    }
+  },
+  mounted() {
+    this.visible = true
+    const { title, width, Comp, params } = this.$options
 
-      this.dialogParams = {
-        ...this.dialogParams,
-        title,
-        width,
-        Comp,
-        params,
-      }
+    this.dialogParams = {
+      ...this.dialogParams,
+      title,
+      width,
+      Comp,
+      params,
+    }
+  },
+  methods: {
+    closed() {
+      this.$emit('drawerClosed')
     },
-    methods: {
-      closed() {
-        this.$emit('drawerClosed')
-      },
-      cancel() {
-        this.visible = false
-      },
-      callback(res) {
-        this.$options.callback && this.$options.callback(res)
-      },
+    cancel() {
+      this.visible = false
     },
-  }
+    callback(res) {
+      this.$options.callback && this.$options.callback(res)
+    },
+  },
+}
 </script>
