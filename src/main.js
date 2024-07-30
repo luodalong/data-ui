@@ -3,7 +3,7 @@ import App from './App.vue'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import DataUi from '../packages/index'
+import DataUi from './index'
 
 Vue.use(Element)
 

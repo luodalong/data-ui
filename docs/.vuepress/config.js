@@ -4,6 +4,12 @@ module.exports = {
   description: '政务部门vue2前端组件库',
   base: '/',
   port: '8080',
+  head: [],
+  plugins: ['demo-container'],
+  markdown: {},
+  chainWebpack (config) {
+    config.resolve.alias.set('core-js/library/fn', 'core-js/features');
+  },
   themeConfig: {
     nav: [
       {
@@ -18,14 +24,9 @@ module.exports = {
     sidebar: {
       '/comps/': [
         '/comps/',
-        '/comps/button.md'
+        '/comps/dialog.md',
+        '/comps/previewImg.md',
       ]
     }
-  },
-  head: [],
-  plugins: ['demo-container'],
-  markdown: {},
-  chainWebpack (config) {
-    config.resolve.alias.set('core-js/library/fn', 'core-js/features');
   },
 }

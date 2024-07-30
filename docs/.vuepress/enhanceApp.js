@@ -1,6 +1,6 @@
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import DataUi from '../../packages/index'
+import DataUi from '../../src/index'
 
 const requireComponents = require.context('./components', false, /\.vue$/)
 
