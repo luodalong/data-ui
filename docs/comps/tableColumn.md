@@ -1,4 +1,4 @@
-# TableColumn 排序表格列组件
+# TableColumn 表格列排序组件
 
 功能介绍：拓展`el-table-column`, 实现多列排序
 
@@ -9,6 +9,7 @@
 ::: demo
 ```html
 <template>
+  <div>queryParams.orderByColumn: {{queryParams.orderByColumn}}</div>
   <el-table
     :data="tableData" stripe
     style="width: 100%">

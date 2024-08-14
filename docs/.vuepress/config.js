@@ -27,6 +27,7 @@ module.exports = {
         '/comps/dialog.md',
         '/comps/previewImg.md',
         '/comps/tableColumn.md',
+        '/comps/btnMore.md',
       ]
     }
   },

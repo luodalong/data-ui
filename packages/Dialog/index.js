@@ -33,4 +33,6 @@ Main.install = function (Vue) {
   return MainFun
 }
 
+Main.isFunction = true
+
 export default Main

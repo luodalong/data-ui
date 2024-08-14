@@ -1,27 +1,21 @@
-import Button from '../packages/Button'
-import Dialog from '../packages/Dialog'
-import PreviewImg from '../packages/PreviewImg'
-import TableColumn from '../packages/TableColumn'
-
-// 存储组件列表
-const components = [Button, Dialog, PreviewImg, TableColumn]
+// 读取packages下文件夹下的index.js
+const requireComponents = require.context('../packages', true, /index\.js$/)
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function (Vue) {
   // 判断是否安装
   if (install.installed) return
 
-  // 遍历注册全局组件
-  components.map((component) => {
-    let name = component.name
-    if (name.indexOf('Data') !== 0) {
-      name = `data-${name}`
-    }
-    return Vue.component(name, component)
-  })
+  requireComponents.keys().forEach((fileName) => {
+    const config = requireComponents(fileName) // 当前组件
+    const { isFunction, name } = config.default
 
-  Vue.use(Dialog)
-  Vue.use(PreviewImg)
+    if (isFunction) {
+      Vue.use(config.default) // 注册函数
+    } else {
+      Vue.component(name.toString(), config.default) // 注册组件
+    }
+  })
 }
 
 // 判断是否是直接引入文件
@@ -32,6 +26,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
-  // 以下是具体的组件列表
-  ...components,
+  // // 以下是具体的组件列表
+  // ...components,
 }

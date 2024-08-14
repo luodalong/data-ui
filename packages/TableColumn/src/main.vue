@@ -1,5 +1,5 @@
 <!--
-  组件UiTableColumn
+  组件DataTableColumn
   @author luodalong
   @date 2024.04.29
 

@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <data-button type="primary" @click="openDialog">Button 按钮</data-button>
-
     <el-button @click="openDialog">打开Dialog 对话框</el-button>
   </div>
 </template>
@@ -15,7 +13,7 @@ export default {
         title: 'Dialog对话框',
         width: '600px',
         params: {
-          name: 'adai',
+          name: '张三',
           age: 18,
         },
         Comp: () => import('./components/DialogTest.vue'),
