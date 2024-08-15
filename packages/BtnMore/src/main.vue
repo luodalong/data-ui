@@ -1,3 +1,11 @@
+<!--
+  组件DataBtnMore
+  @author luodalong
+  @date 2024.08.14
+
+  功能介绍：超过指定数量的按钮，将多余的按钮放入更多按钮中
+-->
+
 <script>
 export default {
   name: 'DataBtnMore',
